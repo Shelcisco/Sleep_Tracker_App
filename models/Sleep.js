@@ -8,7 +8,7 @@ class Sleep extends Model {}
 Sleep.init(
     {
         id:{
-            type:DataTypes.STRING,
+            type:DataTypes.DATE,
             allowNull:false,
         },
         hours_of_sleep:{
@@ -23,7 +23,14 @@ Sleep.init(
             type:DataTypes.FLOAT,
             allowNull:false,
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Sleep',
+      }
 );
 
 module.exports=Sleep;
