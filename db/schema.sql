@@ -10,7 +10,7 @@ CREATE TABLE users(
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     email_address VARCHAR(30)NOT NULL,
-    password VARCHAR(30) NOT NULL
+    user_password VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE sleep_data(
