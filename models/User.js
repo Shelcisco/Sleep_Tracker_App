@@ -6,8 +6,10 @@ class User extends Model {}
 User.init(
     {
         id:{
+            primaryKey:true,
             type:DataTypes.STRING,
-            allowNull:false,     
+            allowNull:false,    
+            autoIncrement:true 
         },
         first_name:{
             type:DataTypes.STRING,
@@ -20,12 +22,25 @@ User.init(
         email_address:{
             type:DataTypes.STRING,
             allowNull:false,
+            validate:{
+                isEmail:true
+            }
         },
         user_password:{
             type:DataTypes.STRING,
             allowNull:false,
+            validate:{
+                len:[8]
+            }
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'User',
+      }
 );
 
 
