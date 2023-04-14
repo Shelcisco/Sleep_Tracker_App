@@ -3,8 +3,6 @@ const sequelize = require('../config/connection');
 
 class Sleep extends Model {}
 
-
-
 Sleep.init(
     {
         id:{
