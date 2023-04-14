@@ -5,21 +5,22 @@ class Sleep extends Model {}
 
 Sleep.init(
     {
-        id:{
-            type:DataTypes.DATE,
-            allowNull:false,
+        id: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            primaryKey: true,
         },
-        hours_of_sleep:{
-            type:DataTypes.FLOAT,
-            allowNull:false,
+        hours_of_sleep: {
+            type: DataTypes.FLOAT,
+            allowNull: false,
         },
-        your_mood:{
-            type:DataTypes.STRING,
-            allowNull:false,
+        your_mood: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        rem_sleep:{
-            type:DataTypes.FLOAT,
-            allowNull:false,
+        rem_sleep: {
+            type: DataTypes.FLOAT,
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,
