@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Sleep } = require('../../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../../helpers');
 
 router.post('/', withAuth, async (req, res) => {
     try {
