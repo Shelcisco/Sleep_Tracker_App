@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../helpers/sqlHelpers');
 
 
 router.get('/', (req, res) => {

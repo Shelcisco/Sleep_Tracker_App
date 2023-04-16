@@ -9,7 +9,9 @@ const { User } = require('../../models');
 //     }
 // })
 
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
+    res.render('/register');
+    
     try {
       const userData = await User.create(req.body);
   
