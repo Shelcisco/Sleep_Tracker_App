@@ -19,14 +19,14 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        email_address: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isEmail: true,
             }
         },
-        user_password: {
+        password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
