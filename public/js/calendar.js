@@ -10,6 +10,7 @@ function handleEventAdd(info) {
       allDay: info.allDay
     });
     alert('Event created!');
+    saveEvents(calendar.getEvents());
   }
 }
 
@@ -18,10 +19,22 @@ function handleEventDelete(info) {
   if (confirm("Are you sure you want to delete this event?")) {
     info.event.remove();
     alert('Event deleted!');
+    saveEvents(info.event.calendar.getEvents());
   }
 }
 
-//event listner/console log
+//retrieve events from local storage
+function getEventsFromLocalStorage() {
+  var events = localStorage.getItem('calendarEvents');
+  return events ? JSON.parse(events) : [];
+}
+
+//save events to local storage
+function saveEvents(events) {
+  localStorage.setItem('calendarEvents', JSON.stringify(events));
+}
+
+//event listener/console log
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -34,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     eventRemove: function(info) {
       console.log('Event removed:', info.event);
-    }
+    },
+    events: getEventsFromLocalStorage()
   });
   calendar.render();
 });
