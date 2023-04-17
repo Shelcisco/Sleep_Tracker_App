@@ -3,8 +3,8 @@ const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const passport = require('passport');
-const LocalStrategy = require('passport-local');
+// const passport = require('passport');
+// const LocalStrategy = require('passport-local');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // const FullCalendar = require('fullcalendar');
@@ -15,7 +15,6 @@ const PORT = process.env.PORT || 3001;
 
 // app.use(require('serve-static')(__dirname + 'public'));
 const hbs = exphbs.create({  });
-
 
 const sess = {
   secret: 'Super sleepy time',
@@ -31,17 +30,19 @@ const sess = {
     db: sequelize
   })
 };
+app.use(session(sess));
 
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('cookie-parser')());
-app.use(require('body-parser').urlencoded({ extended: true }));
-app.use(passport.initialize());
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(session(sess));
-app.use(passport.session());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+// app.use(require('cookie-parser')());
+// app.use(require('body-parser').urlencoded({ extended: true }));
+// app.use(passport.initialize());
+
+// app.use(passport.session());
 app.use(routes);
 
 

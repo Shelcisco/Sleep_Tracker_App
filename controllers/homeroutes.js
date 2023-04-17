@@ -12,25 +12,24 @@ router.get('/', (req, res) => {
 
 router.get('/sleep', withAuth, async (req, res) => {
   try {
-      const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-        inlcude: [{ model: Sleep }],
+      const sleepData = new Sleep ({
+        inlcude: [{ model: User }],
       });
 
-      const user = userData.get({ plain: true });
+      const sleep = sleepData.get({ plain: true });
   
       res.render('sleep', {
-        ...user,
+        sleep,
         logged_in: true
       });
     } catch (err) {
       console.log(err);
-      res.status(400).json(err);
+      res.status().json(err);
     }
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/sleep');
     return;
   }
