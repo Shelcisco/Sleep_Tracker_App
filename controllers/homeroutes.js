@@ -3,15 +3,8 @@ const { User, Sleep } =  require('../models');
 const withAuth = require('../helpers/sqlHelpers');
 
 router.get('/', (req, res) => {
-
-  if (req.session.logged_in) {
-    res.redirect('/sleep'); 
-    return;
-  }
-
-  res.render('login');
+  res.render('homepage');
 });
-
 
 router.get('/sleep', withAuth, async (req, res) => {
   try {
@@ -31,6 +24,12 @@ router.get('/sleep', withAuth, async (req, res) => {
   }
 });
 
-
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
 
 module.exports = router;
