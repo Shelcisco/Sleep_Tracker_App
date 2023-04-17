@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const sequelize = require('./config/connection');
+const FullCalendar = require('fullcalendar');
 // const helpers = require('./helpers');
 
 var app = express();
@@ -40,6 +41,8 @@ app.use(passport.session());
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(routes);
+
+
 
 passport.use(new LocalStrategy( //passport is an authentication
     function(username, password, done) {
