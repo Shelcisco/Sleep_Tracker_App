@@ -10,11 +10,11 @@ Sleep.init(
             allowNull: false,
             primaryKey: true,
         },
-        hours_of_sleep: {
+        hours: {
             type: DataTypes.FLOAT,
             allowNull: false,
         },
-        your_mood: {
+        mood: {
             type: DataTypes.STRING,
             allowNull: false,
         },
