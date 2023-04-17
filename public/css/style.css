@@ -1,0 +1,160 @@
+h1 {
+  display: block;
+  font-size: 45px;
+  color: gray;
+  font-family: cursive;
+}
+
+nav {
+  background-color: whitesmoke;
+  height: 91px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  float: right;
+}
+
+li {
+  display: inline;
+}
+
+.card {
+  /* Card container styles */
+  width: 300px;
+  height: 350px;
+  border: 0px white;
+  border-radius: 5px;
+  padding: 21px;
+  font-family: cursive;
+}
+
+.card-header {
+  /* Card header styles */
+  font-weight: bold;
+}
+
+.card-body {
+  /* Card body styles */
+  margin-top: 10px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.first {
+  margin-top: -395px;
+  width: 1000px;
+  height: 391px;
+  position: absolute;
+  margin-left: 1000px;
+  font-family: cursive;
+}
+
+.second {
+  border: 20px gray;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  font-family: cursive;
+  top: 315px;
+  margin-left: -1000px;
+  margin-top: -165px;
+}
+
+.third {
+  border: 20px gray;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: 315px;
+  margin-left: -1000px;
+  margin-top: 70px;
+}
+
+.fourth {
+  border: 20px solid blue;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+/* Month header */
+.month {
+  padding: 0px 25px;
+  width: 100px;
+  text-align: center;
+  margin-top: -85px;
+  font-family: cursive;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important;
+}

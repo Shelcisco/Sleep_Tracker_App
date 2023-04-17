@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script src="/public/js/calendar.js"></script>
    
     <link rel="stylesheet" href="style.css"/>
     <title>Sleep Sync </title>
@@ -74,18 +76,21 @@
 <div class="third">
     <h2> User Tips</h2>
         <textarea id="text" placeholder="Sleep Tips" style="width: 384px; height:311px; text-align: center;"></textarea>
-   
+
+        
+        <div id='calendar'></div>     
+
+
 </div>
 <div class="month">
+
     <ul>
       <li class="prev">&#10094;</li>
       <li class="next">&#10095;</li>
       <li>April<br><span style="font-size:18px; ;">2023</span></li>
     </ul>
   </div>
-
-  
-  <ul class="days">
+   <ul class="days">
     <li>1</li>
     <li>2</li>
     <li>3</li>

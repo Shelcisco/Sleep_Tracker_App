@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Sleep } = require('../../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../helpers/sqlHelpers');
 
 router.post('/', withAuth, async (req, res) => {
     try {
@@ -14,6 +14,7 @@ router.post('/', withAuth, async (req, res) => {
       res.status(400).json(err);
     }
   });
+
 
   module.exports = router;
   
