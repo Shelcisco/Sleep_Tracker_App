@@ -10,6 +10,7 @@
   <title>Sleep Sync</title>
  
   <script src="/js/calendar.js"></script>
+  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <style>
         body {
@@ -40,12 +41,11 @@
   <header>
     <nav>
       <h1>SleepSync</h1>
-      <a href="/login">Login</a>
       <a href="#NAV3">Nav3</a>
       <a href="#NAV4">Nav4</a>
     </nav>
     </header>
-    {{!-- {{#if logged_in}} --}}
+    {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
     </nav>
@@ -80,7 +80,7 @@
           
 
 
-  {{!-- {{/if}} --}}
+  {{/if}}
 
     {{{ body }}}
    

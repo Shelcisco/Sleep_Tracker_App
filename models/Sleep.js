@@ -25,7 +25,7 @@ Sleep.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-              model: 'user',
+              model: 'users',
               key: 'id',
             },
           },
@@ -35,7 +35,7 @@ Sleep.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Sleep',
+        modelName: 'sleep',
       }
 );
 
