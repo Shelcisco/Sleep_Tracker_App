@@ -5,24 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
-      <script>
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ]
-        });
-
-        calendar.render();
-      });
-
-    </script>
   <title>Sleep Sync</title>
  
-  {{!-- <script src="/js/calendar.js"></script> --}}
+  <script src="/js/calendar.js"></script>
+  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <style>
         body {
@@ -50,17 +38,14 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-   
-    <!-- Only display the logout button if the user is logged in -->
+  <header>
     <nav>
       <h1>SleepSync</h1>
-      <a href="/login">Login</a>
       <a href="#NAV3">Nav3</a>
       <a href="#NAV4">Nav4</a>
     </nav>
     </header>
-    {{!-- {{#if logged_in}} --}}
+    {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
     </nav>
@@ -75,11 +60,12 @@
     </div>
 </div>
 <div class="first">
-    <h2> Leaderboard</h2>
+    {{!-- <h2> Leaderboard</h2>
     
-    <textarea id="text" placeholder="Leaderboard"style="width: 985px; height: 300px;text-align:center"></textarea>
+    <textarea id="text" placeholder="Leaderboard"style="width: 985px; height: 300px;text-align:center"></textarea> --}}
 
-
+ <div id='calendar'></div>  
+ 
 <div class="second">
         <h2> User Input</h2>
         <textarea id="text" placeholder= "User Input"style="width: 384px; height: 311px; text-align:center"></textarea>
@@ -93,50 +79,8 @@
         </div>
           
 
-{{!-- 
-</div>
-<div class="month">
 
-    <ul>
-      <li class="prev">&#10094;</li>
-      <li class="next">&#10095;</li>
-      <li>April<br><span style="font-size:18px; ;">2023</span></li>
-    </ul>
-  </div>
-   <ul class="days">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li>10</li>
-    <li><span class="active">11</span></li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-  </ul>
-         --}}
-
-  {{!-- {{/if}} --}}
+  {{/if}}
 
     {{{ body }}}
    
