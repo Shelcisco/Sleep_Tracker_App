@@ -40,6 +40,7 @@ li {
   margin-top: 10px;
   border-color: black;
   border-radius: 5px;
+  margin-left: -20px;
 }
 
 .first {
@@ -59,7 +60,7 @@ li {
   font-family: cursive;
   top: 315px;
   margin-left: -1000px;
-  margin-top: -165px;
+  margin-top: -770px;
 }
 
 .third {
@@ -69,7 +70,7 @@ li {
   position: relative;
   top: 315px;
   margin-left: -1000px;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .fourth {
