@@ -49,6 +49,7 @@ li {
     font-family:cursive;
 
 }
+
 .second{
    border:20px gray;
    width:400px;
@@ -59,6 +60,7 @@ li {
    margin-left: -1000px;
    margin-top:-165px;
 }
+
 .third{
     border:20px gray;
     width:400px;
@@ -77,6 +79,7 @@ li {
     margin:0px;
 
 }
+
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
@@ -148,5 +151,5 @@ body {font-family: Verdana, sans-serif;}
 .days li .active {
   padding: 5px;
   background: #1abc9c;
-  color: white !important
+  color: white 
 }
