@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user.first_name}}!</h2>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
     <form class="form new-sleep-form">
       <div class="form-group">
         <label for="day">Day:</label>
-        <input class="form-input" type="text" id="day" name="day" />
+        <input class="form-input" type="date" id="day" name="day" />
       </div>
       <div class="form-group">
         <label for="hours">Hours slept:</label>
@@ -23,7 +23,7 @@
       </div>
       <div class="form-group">
         <label for="rem">Hours of REM Sleep:</label>
-        <input class="form-input" type="text" id="rem" name="rem" />
+        <input class="form-input" type="number" id="rem" name="rem" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -34,7 +34,7 @@
   <div class="col-md-6 sleep-list">
     <h3>Past sleep patterns:</h3>
 
-    {{!-- {{#each sleep as |day|}}
+    {{#each sleep as |day|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/sleep/{{sleep.id}}">{{sleep.day}}</a></h4>
@@ -43,7 +43,7 @@
         <button class="btn btn-sm btn-danger" data-id="{{sleep.id}}">DELETE</button>
       </div>
     </div>
-    {{/each}} --}}
+    {{/each}}
   </div>
 
 </div>
