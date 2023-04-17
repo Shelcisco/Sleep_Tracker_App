@@ -11,7 +11,7 @@ Sleep.init(
             primaryKey: true,
         },
         hours: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         mood: {
@@ -19,7 +19,7 @@ Sleep.init(
             allowNull: false,
         },
         rem_sleep: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         user_id: {
