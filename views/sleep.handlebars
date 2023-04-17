@@ -31,11 +31,10 @@
     </form>
   </div>
 
-  {{#if sleep.length}}
   <div class="col-md-6 sleep-list">
     <h3>Past sleep patterns:</h3>
 
-    {{#each sleep as |day|}}
+    {{!-- {{#each sleep as |day|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/sleep/{{sleep.id}}">{{sleep.day}}</a></h4>
@@ -44,11 +43,10 @@
         <button class="btn btn-sm btn-danger" data-id="{{sleep.id}}">DELETE</button>
       </div>
     </div>
-    {{/each}}
+    {{/each}} --}}
   </div>
-  {{/if}}
+
 </div>
 
 <script src="/js/sleep.js"></script>
-{{else}}
 
