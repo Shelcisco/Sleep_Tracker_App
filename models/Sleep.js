@@ -6,9 +6,14 @@ class Sleep extends Model {}
 Sleep.init(
     {
         id: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
             allowNull: false,
+            autoIncrement: true,
             primaryKey: true,
+        },
+        date: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         hours: {
             type: DataTypes.INTEGER,
