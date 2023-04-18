@@ -31,7 +31,7 @@ router.get("/sleep", withAuth, async (req, res) => {
 router.post("/sleep", withAuth, async (req, res) => {
   try {
     const newSleepData = await Sleep.create({
-      id: req.body.day,
+      date: req.body.day,
       hours: req.body.hours,
       mood: req.body.mood,
       rem_sleep: req.body.rem_sleep,

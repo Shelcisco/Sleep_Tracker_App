@@ -65,4 +65,8 @@ router.post('/', async (req, res) => {
     }
   });
   
+  router.get('/', (req, res) => {
+    const users = User.findAll({});
+    res.json(users);
+  })
   module.exports = router;
