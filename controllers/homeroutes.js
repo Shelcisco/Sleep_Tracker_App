@@ -35,7 +35,7 @@ router.post("/sleep", withAuth, async (req, res) => {
       hours: req.body.hours,
       mood: req.body.mood,
       rem_sleep: req.body.rem_sleep,
-      // user_id: req.session.id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newSleepData);
