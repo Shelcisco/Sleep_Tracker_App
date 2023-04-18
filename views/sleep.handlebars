@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{user.first_name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Enter your sleep:</h3>
+
+    <form class="form new-sleep-form">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input class="form-input" type="text" id="date" name="date" />
+      </div>
+      <div class="form-group">
+        <label for="hours">Hours slept:</label>
+        <input class="form-input" type="number" id="hours" name="hours"></input>
+      </div>
+      <div class="form-group">
+        <label for="mood">Mood:</label>
+        <input class="form-input" type="text" id="mood" name="mood" />
+      </div>
+      <div class="form-group">
+        <label for="rem">Hours of REM Sleep:</label>
+        <input class="form-input" type="number" id="rem" name="rem" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-6 sleep-list">
+    <h3>Past sleep patterns:</h3>
+
+    {{#each sleep as |day|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/sleep/{{sleep.id}}">{{sleep.day}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{sleep.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</div>
+
+<script src="/js/sleep.js"></script>
+

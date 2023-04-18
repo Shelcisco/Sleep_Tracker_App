@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+
+  <title>Sleep Sync</title>
+ 
+  <script src="/js/calendar.js"></script>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+        body {
+          -webkit-animation: colorchange 20s infinite;
+          animation: colorchange 20s infinite;
+        }
+        @-webkit-keyframes colorchange {
+          0% {
+            background: #42bfa2a6;
+          }
+          25% {
+            background: #095484;
+          }
+          50% {
+            background: #1c87c9;
+          }
+          75% {
+            background: #6c017ae7;
+          }
+          100% {
+            background: #1288a9bc;
+          }
+        }
+      </style>
+</head>
+
+<body>
+  <header>
+    <h1>SleepSync</h1>
+  </header>
+    <nav>
+    <a href="/">Home</a>
+    {{#if logged_in}}
+    <a id="logout" >Logout</a>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+
+  {{{ body }}}
+   
+  {{#if logged_in}}
+      <div id='calendar'></div>  
+  {{/if}}
+  </main>
+  <footer>
+      
+  </footer>
+
+  <!-- Only include the logout script if the user is logged in -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

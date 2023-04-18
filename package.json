@@ -1,0 +1,34 @@
+{
+  "name": "sleep_tracker_app",
+  "version": "1.0.0",
+  "description": "A sleep tracker app to help you analyze your sleep over time.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/interaction": "^6.1.5",
+    "@fullcalendar/react": "^6.1.5",
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "cookie-parser": "^1.4.6",
+    "cron": "^2.3.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.5",
+    "express-session": "^1.17.3",
+    "fullcalendar": "^6.1.5",
+    "mysql2": "^3.2.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^6.30.0",
+    "uuid": "^9.0.0"
+  }
+}
