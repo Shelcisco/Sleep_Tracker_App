@@ -28,7 +28,7 @@ Sleep.init(
             allowNull: false,
         },
         user_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
               model: 'users',
               key: 'id',
