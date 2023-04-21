@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   
         res.status(200).json(userData);
       });
-      res.render('homepage');
+      //res.render('homepage');
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
