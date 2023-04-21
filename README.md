@@ -18,7 +18,7 @@ With this App you'll be able to:
 * [Packages](#packages)
 
 ## [Installation](#table-of-content)
-Deployed on Heroku : https://sleepsync.herokuapp.com/
+Deployed on Heroku : https://sleep--sync.herokuapp.com/
 
 ## [Usage](#table-of-content)
 When you click on the link of the application, you will be greeted with the login/sign up page. You <mark>must login</mark> to use SleepSync
