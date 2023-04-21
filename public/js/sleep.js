@@ -7,7 +7,7 @@ const newFormHandler = async (event) => {
   const rem_sleep = document.querySelector("#rem").value.trim();
 
   if (date && hours && mood && rem_sleep) {
-    const response = await fetch("/sleep", {
+    const response = await fetch("/api/sleep", {
       method: "POST",
       body: JSON.stringify({ date, hours, mood, rem_sleep }),
       headers: {
