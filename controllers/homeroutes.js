@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 router.get("/", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/sleep");
+    res.redirect("/api/sleep");
     return;
   }
   res.render("homepage");
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/sleep");
+    res.redirect("/api/sleep");
     return;
   }
   res.render("login");
