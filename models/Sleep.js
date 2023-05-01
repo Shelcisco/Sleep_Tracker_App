@@ -1,63 +1,48 @@
-const { Model, DataTypes }= require('sequelize');
-const bcrypt = require('bcrypt');
+const {Model, DataTypes}= require('sequelize');
 const sequelize = require('../config/connection');
 
-class User extends Model {
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-      }
-}
+class Sleep extends Model {}
 
-User.init(
+Sleep.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
             primaryKey: true,
-            autoIncrement: true, 
-            allowNull: false    
         },
-        first_name: {
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+           defaultValue: DataTypes.NOW
+        },
+        hours: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        mood: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        last_name: { 
-            type: DataTypes.STRING,
+        rem_sleep: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true,
-            }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len:[8]
-            }
-        }
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'users',
+              key: 'id',
+            },
+          },
     },
     {
-        hooks: {
-          beforeCreate: async (newUserData) => {
-            newUserData.password = await bcrypt.hash(newUserData.password, 10);
-            return newUserData;
-          },
-          beforeUpdate: async (updatedUserData) => {
-            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-            return updatedUserData;
-          },
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'users',
+        modelName: 'sleep',
       }
 );
 
-
-module.exports = User;
+module.exports=Sleep;
