@@ -35,6 +35,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log("DONE");
       document.location.replace("/");
     } else {
       alert(response.statusText);
