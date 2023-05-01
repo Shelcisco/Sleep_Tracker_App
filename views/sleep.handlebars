@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{user.first_name}}!</h2>
+    <h2>Welcome, {{userData.dataValues.first_name}}!</h2>
   </div>
 </div>
 
@@ -10,8 +10,8 @@
 
     <form class="form new-sleep-form">
       <div class="form-group">
-        <label for="date">Date:</label>
-        <input class="form-input" type="text" id="date" name="date" />
+        <label for="date">Date (yyyy-mm-dd):</label>
+        <input pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}$" class="form-input" type="text" id="date" name="date" />
       </div>
       <div class="form-group">
         <label for="hours">Hours slept:</label>
@@ -37,10 +37,10 @@
     {{#each sleep as |day|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/sleep/{{sleep.id}}">{{sleep.day}}</a></h4>
+        <h4><a href='sleep/{{day.id}}'>{{day.date}}, {{day.hours}} hours</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{sleep.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id={{day.id}}>DELETE</button>
       </div>
     </div>
     {{/each}}
@@ -49,4 +49,3 @@
 </div>
 
 <script src="/js/sleep.js"></script>
-
