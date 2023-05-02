@@ -26,7 +26,7 @@ router.get("/sleep", withAuth, async (req, res) => {
 
     console.log(userData);
     const sleep = sleepData.map((sleep)=> sleep.get({plain:true}))
-    //const sleep = sleepData.get({ plain: true });
+    
 
     res.render("sleep", {
       userData,
@@ -53,8 +53,6 @@ router.get("/sleep/:id", withAuth, async (req, res) => {
       return;
     }
     console.log(sleepData)
-    //const sleep = sleepData.map((sleep)=> sleep.get({plain:true}))
-    //const sleep = sleepData.get({ plain: true });
 
     res.render("singleSleep", {
       sleep:sleepData.dataValues,

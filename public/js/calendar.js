@@ -1,4 +1,3 @@
-// import { Calendar } from '@fullcalendar/core';
 
 //Calendar view/add event function
 function handleEventAdd(info) {
@@ -25,11 +24,7 @@ function handleEventDelete(info) {
   }
 }
 
-//retrieve events from local storage
-// function getEventsFromLocalStorage() {
-//   var events = localStorage.getItem('calendarEvents');
-//   return events ? JSON.parse(events) : [];
-// }
+
 function getEventsFromLocalStorage() {
   const events = localStorage.getItem("calendarEvents");
   const sleepData = JSON.parse(localStorage.getItem("sleepData")) || [];
@@ -46,7 +41,6 @@ function saveEvents(events) {
 //event listener/console log
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
-  // var calendarEl = document.getElementById('row mb-2');
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     selectable: true,
