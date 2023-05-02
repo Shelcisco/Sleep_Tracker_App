@@ -31,12 +31,14 @@ If inputting the information under "enter your sleep" you'll see your previous s
 ## Walkthrough
 
 Video Walkthrough:
-![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\SleepSyncGif.gif)
+
+![](https://github.com/jbungurait/Sleep_Tracker_App/blob/main/Assets/SleepSyncGif.gif)
 
 Screenshot:
-![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Sreenshot1.png)
-![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Screenshot2.png)
-![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Screenshot3.png)
+
+![](https://github.com/jbungurait/Sleep_Tracker_App/blob/main/Assets/Sreenshot1.png)
+![](https://github.com/jbungurait/Sleep_Tracker_App/blob/main/Assets/Screenshot2.png)
+![](https://github.com/jbungurait/Sleep_Tracker_App/blob/main/Assets/Screenshot3.png)
 
 
 ## [Authors](#table-of-content)
