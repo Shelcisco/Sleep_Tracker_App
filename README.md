@@ -16,14 +16,28 @@ With this App you'll be able to:
 * [Usage](#usage)
 * [Authors](#authors)
 * [Packages](#packages)
+* [Walkthrough](#walkthrough)
 
 ## [Installation](#table-of-content)
 Deployed on Heroku : https://sleep--sync.herokuapp.com/
 
 ## [Usage](#table-of-content)
-When you click on the link of the application, you will be greeted with the login/sign up page. You <mark>must login</mark> to use SleepSync
+When you click on the link of the application, you will be greeted with the login/sign up page. You <mark>must login</mark> to use SleepSync.
 
-Once logged in you will be able to enter time slept (including REM time), mood, and any relevant notes. A calendar event can be saved either by filling in the template on the homepage, or clicking directly on a date on the calendar where a prompt will aloow you to add your input.  
+Once logged in you will be able to enter time slept (including REM time), mood, and any relevant notes. A calendar event can be saved either by filling in the template on the homepage "enter your sleep", or clicking directly on a date on the calendar where a prompt will allow you to add your input. 
+
+If inputting the information under "enter your sleep" you'll see your previous sleep history appear under "past sleep patterns." If you click on one of the listed dates you can see the full information of your previous sleep event. Click the "back" button on your browser to return to the homepage. Events may also be delted by clicking the 'delete' button next to the event you would like to remove. 
+
+## Walkthrough
+
+Video Walkthrough:
+![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\SleepSyncGif.gif)
+
+Screenshot:
+![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Sreenshot1.png)
+![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Screenshot2.png)
+![](C:\Users\shelb\bootcamp\Sleep_Tracker_App\Assets\Screenshot3.png)
+
 
 ## [Authors](#table-of-content)
 
