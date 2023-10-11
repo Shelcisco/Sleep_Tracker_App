@@ -10,7 +10,7 @@ With this App you'll be able to:
 * View your condesnsed sleep pattern history 
 
 
-## [Table of Content](#table-of-content)
+## [Table of Contents](#table-of-content)
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
